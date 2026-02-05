@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    --primary: 185 60% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 30% 94%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 185 50% 92%;
+    --accent-foreground: 185 60% 25%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --income: 152 60% 42%;
+    --income-foreground: 0 0% 100%;
+    --income-light: 152 50% 94%;
+
+    --expense: 12 76% 61%;
+    --expense-foreground: 0 0% 100%;
+    --expense-light: 12 70% 95%;
+
+    --office: 220 70% 55%;
+    --office-foreground: 0 0% 100%;
+    --office-light: 220 60% 95%;
+
+    --personal: 280 65% 55%;
+    --personal-foreground: 0 0% 100%;
+    --personal-light: 280 55% 95%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 185 60% 35%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --gradient-income: linear-gradient(135deg, hsl(152 60% 42%) 0%, hsl(165 55% 48%) 100%);
+    --gradient-expense: linear-gradient(135deg, hsl(12 76% 61%) 0%, hsl(25 85% 58%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(185 60% 35%) 0%, hsl(200 65% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 99%) 100%);
+    
+    --shadow-sm: 0 1px 2px 0 hsl(220 25% 15% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(220 25% 15% / 0.05), 0 2px 4px -2px hsl(220 25% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 25% 15% / 0.08), 0 4px 6px -4px hsl(220 25% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 25% 15% / 0.1), 0 8px 10px -6px hsl(220 25% 15% / 0.08);
+    --shadow-income: 0 8px 20px -4px hsl(152 60% 42% / 0.25);
+    --shadow-expense: 0 8px 20px -4px hsl(12 76% 61% / 0.25);
+    --shadow-primary: 0 8px 20px -4px hsl(185 60% 35% / 0.25);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 185 55% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 185 40% 20%;
+    --accent-foreground: 185 55% 65%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --income: 152 55% 50%;
+    --income-foreground: 0 0% 100%;
+    --income-light: 152 40% 15%;
+
+    --expense: 12 70% 55%;
+    --expense-foreground: 0 0% 100%;
+    --expense-light: 12 50% 15%;
+
+    --office: 220 65% 60%;
+    --office-foreground: 0 0% 100%;
+    --office-light: 220 50% 15%;
+
+    --personal: 280 60% 60%;
+    --personal-foreground: 0 0% 100%;
+    --personal-light: 280 45% 15%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 185 55% 45%;
+
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 185 55% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 185 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .gradient-income {
+    background: var(--gradient-income);
+  }
+  
+  .gradient-expense {
+    background: var(--gradient-expense);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .shadow-income {
+    box-shadow: var(--shadow-income);
+  }
+  
+  .shadow-expense {
+    box-shadow: var(--shadow-expense);
+  }
+  
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .glass {
+    backdrop-filter: blur(12px);
+    background: hsl(var(--card) / 0.8);
+  }
+}
