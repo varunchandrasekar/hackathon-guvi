@@ -184,7 +184,7 @@ export const Index = () => {
 
         <button
           onClick={handleDownload}
-          style={{ position: 'absolute', top: 101, right: 143 }}
+          style={{ position: 'absolute', top: 101, right: 203 }}
           className="
         flex items-center gap-2
         px-4 py-2
