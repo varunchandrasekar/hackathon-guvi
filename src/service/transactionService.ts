@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Base backend URL
-const API_BASE_URL = "http://localhost:8080/api/transactions";
+const API_BASE_URL = "https://money-manager-rest.up.railway.app/api/transactions";
 
 // Axios instance (good practice)
 const api = axios.create({
