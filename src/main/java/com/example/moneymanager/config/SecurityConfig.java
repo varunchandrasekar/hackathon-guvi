@@ -45,8 +45,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowedOrigins(List.of(
-                "http://192.168.1.7:8081",
-                "http://127.0.0.1:5173"
+                "*"
         ));
 
         config.setAllowedMethods(List.of(

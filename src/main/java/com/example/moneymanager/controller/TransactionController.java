@@ -31,7 +31,7 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/transactions")
 @RequiredArgsConstructor
 @CrossOrigin(
-	    origins = "http://192.168.1.16:8081",
+	    origins = "*",
 	    allowedHeaders = "*",
 	    methods = { 
 	        RequestMethod.GET, 
@@ -111,6 +111,11 @@ public class TransactionController {
     	
          service.deleteTransaction(id);
          return ResponseEntity.ok("Transaction deleted successfully");
+    }
+
+     @GetMapping("/success")
+    public String getSuccess() {
+    	return "SUCCESS";
     }
 }
 
